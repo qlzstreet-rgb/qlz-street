@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es-GT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#141312" />
+  <meta name="description" content="QLZ Street — Del Quetzal a la calle. Gorras importadas, joyería urbana, anillos, audio y accesorios. Envíos a toda Guatemala, pago contra entrega o transferencia." />
+  <title>QLZ Street · Del Quetzal a la calle.</title>
+
+  <!-- Vista previa al compartir en WhatsApp, Facebook, Instagram y TikTok -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_GT" />
+  <meta property="og:site_name" content="QLZ Street" />
+  <meta property="og:title" content="QLZ Street · Del Quetzal a la calle." />
+  <meta property="og:description" content="Gorras importadas, acero inoxidable, audio y accesorios urbanos. Envíos a toda Guatemala · Pago contra entrega o transferencia." />
+  <meta property="og:image" content="identidad-marca/png/03-portada-banner-redes.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="QLZ Street · Del Quetzal a la calle." />
+  <meta name="twitter:description" content="Gorras importadas, acero inoxidable, audio y accesorios urbanos en Guatemala." />
+  <meta name="twitter:image" content="identidad-marca/png/03-portada-banner-redes.png" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23141312'/%3E%3Ctext x='32' y='44' font-family='Arial Black,sans-serif' font-size='30' font-weight='900' fill='%23C8963E' text-anchor='middle'%3EQ%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="identidad-marca/png/02-foto-perfil-1080x1080.png" />
+
+  <!-- Oswald (cartel condensado) · DM Sans (lectura) · Space Mono (códigos, precios, stock) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Oswald:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <!-- Grano fotográfico / asfalto -->
+  <div class="grano" aria-hidden="true"></div>
+
+  <!-- Isotipo oficial (pluma limpia de identidad-marca/svg/logo-principal-solo.svg) -->
+  <svg class="defs-ocultas" aria-hidden="true" focusable="false">
+    <defs>
+      <g id="pluma-qlz">
+        <g transform="rotate(28, 70, 132)">
+          <path fill="#1F5C47" d="M 68.5,10 C 52,22 40,38 35,58 L 54,90 L 31,70 C 25,88 22,106 23,124 L 46,146 L 24,134 C 25,152 30,168 38,184 L 66.5,196 L 67.5,20 Z" />
+          <path fill="#2B7A5E" d="M 71.5,10 C 87,26 97,46 100,70 L 78,88 L 101,80 C 101,98 98,116 92,134 L 75,146 L 91,142 C 88,158 82,172 75,184 L 89,182 L 82,196 L 72.5,200 L 72.5,20 Z" />
+          <polygon fill="#1F5C47" points="65,194 60,198 34,244 45,240 65,204" />
+          <polygon fill="#2B7A5E" points="73.5,198 79,200 76,256 69,248 72.5,206" />
+          <polygon fill="#C8963E" points="70,8 72.5,26 72.5,202 68,262 62,258 67.5,202 67.5,26" />
+        </g>
+      </g>
+    </defs>
+  </svg>
+
+  <a class="saltar" href="#catalogo">Saltar al catálogo</a>
+
+  <!-- ================= CABECERA (pulgar) ================= -->
+  <header class="cabecera" id="cabecera">
+    <div class="cabecera__fila envoltura">
+      <a class="marca" href="#inicio" aria-label="QLZ Street, inicio">
+        <svg class="marca__pluma" viewBox="-6 0 160 272" aria-hidden="true"><use href="#pluma-qlz" /></svg>
+        <span class="marca__texto">
+          <span class="marca__qlz">QLZ</span>
+          <span class="marca__street">STREET</span>
+        </span>
+      </a>
+
+      <p class="cabecera__lema">Del Quetzal a la calle.</p>
+
+      <button type="button" class="btn-bolsa" id="btnBolsa" aria-haspopup="dialog" aria-controls="recibo" aria-expanded="false">
+        <span class="btn-bolsa__txt">BOLSA</span>
+        <span class="btn-bolsa__n" id="bolsaConteo">00</span>
+      </button>
+    </div>
+
+    <nav class="filtros" aria-label="Categorías">
+      <div class="filtros__pista envoltura" id="filtros" role="tablist" aria-label="Filtrar por categoría">
+        <button type="button" role="tab" class="filtro is-activo" id="tab-todos" data-cat="todos" aria-selected="true" aria-controls="rejilla" tabindex="0">Todos<sup class="filtro__n" data-n="todos">18</sup></button>
+        <button type="button" role="tab" class="filtro" id="tab-gorras" data-cat="gorras" aria-selected="false" aria-controls="rejilla" tabindex="-1">Gorras<sup class="filtro__n" data-n="gorras">10</sup></button>
+        <button type="button" role="tab" class="filtro" id="tab-joyeria" data-cat="joyeria" aria-selected="false" aria-controls="rejilla" tabindex="-1">Joyería y Anillos<sup class="filtro__n" data-n="joyeria">3</sup></button>
+        <button type="button" role="tab" class="filtro" id="tab-camisas" data-cat="camisas" aria-selected="false" aria-controls="rejilla" tabindex="-1">Camisas<sup class="filtro__n" data-n="camisas">PRONTO</sup></button>
+        <button type="button" role="tab" class="filtro" id="tab-audio" data-cat="audio" aria-selected="false" aria-controls="rejilla" tabindex="-1">Relojes y Audio<sup class="filtro__n" data-n="audio">2</sup></button>
+        <button type="button" role="tab" class="filtro" id="tab-accesorios" data-cat="accesorios" aria-selected="false" aria-controls="rejilla" tabindex="-1">Accesorios<sup class="filtro__n" data-n="accesorios">3</sup></button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <!-- ================= CARTEL (portada) ================= -->
+    <section class="cartel envoltura" aria-labelledby="cartelTitulo">
+      <div class="cartel__meta">
+        <span>GT · CIUDAD QUETZAL</span>
+        <span id="estadoInventario">INVENTARIO · L1</span>
+      </div>
+
+      <h1 class="cartel__titulo" id="cartelTitulo">
+        <span class="cartel__linea">Del Quetzal</span>
+        <span class="cartel__linea cartel__linea--hueca">a la calle.</span>
+      </h1>
+
+      <div class="cartel__pie">
+        <p class="cartel__copy">
+          Gorras importadas, acero, audio y accesorios. Pocas piezas por modelo: cuando se van, se van.
+        </p>
+        <ul class="cartel__datos" aria-label="Datos de la tienda">
+          <li><b id="datoPiezas">16</b><span>piezas con stock</span></li>
+          <li><b>22</b><span>deptos. con envío</span></li>
+          <li><b>Q</b><span>contra entrega</span></li>
+        </ul>
+      </div>
+
+      <!-- Tira de contactos: 3 piezas reales destacadas -->
+      <div class="contactos" id="contactos" aria-label="Piezas destacadas"></div>
+    </section>
+
+    <!-- Cinta deslizante -->
+    <div class="cinta" aria-hidden="true">
+      <div class="cinta__pista">
+        <span>Piezas contadas</span><i>✕</i><span>Envíos a toda Guatemala</span><i>✕</i><span>Pago contra entrega</span><i>✕</i><span>Transferencia bancaria</span><i>✕</i><span>Del Quetzal a la calle</span><i>✕</i>
+        <span>Piezas contadas</span><i>✕</i><span>Envíos a toda Guatemala</span><i>✕</i><span>Pago contra entrega</span><i>✕</i><span>Transferencia bancaria</span><i>✕</i><span>Del Quetzal a la calle</span><i>✕</i>
+      </div>
+    </div>
+
+    <!-- ================= CATÁLOGO ================= -->
+    <section class="catalogo envoltura" id="catalogo" aria-labelledby="catTitulo">
+      <div class="regla" aria-hidden="true"><span>02</span><span>CATÁLOGO</span></div>
+
+      <div class="catalogo__barra">
+        <div>
+          <h2 class="catalogo__titulo" id="catTitulo">Todo el catálogo</h2>
+          <p class="catalogo__conteo" id="catConteo">18 piezas</p>
+        </div>
+        <div class="vista" role="group" aria-label="Tipo de vista">
+          <button type="button" class="vista__btn is-activo" data-vista="grilla" aria-pressed="true">Grilla</button>
+          <button type="button" class="vista__btn" data-vista="lista" aria-pressed="false">Lista</button>
+        </div>
+      </div>
+
+      <p class="catalogo__nota" id="catNota" hidden></p>
+
+      <div class="rejilla" id="rejilla" data-vista="grilla" role="tabpanel" aria-labelledby="tab-todos" aria-live="polite"></div>
+    </section>
+
+    <!-- ================= GARANTÍAS ================= -->
+    <section class="garantias envoltura" aria-label="Envíos, pagos y stock">
+      <div class="regla" aria-hidden="true"><span>03</span><span>CÓMO FUNCIONA</span></div>
+      <ol class="garantias__lista">
+        <li>
+          <span class="garantias__letra">A</span>
+          <h3>Envío a toda Guatemala</h3>
+          <p>Capital, municipios y los 22 departamentos con Forza Delivery o entrega personal. El costo se coordina según tu zona o departamento.</p>
+        </li>
+        <li>
+          <span class="garantias__letra">B</span>
+          <h3>Pagas como quieras</h3>
+          <p>Pago contra entrega (efectivo al recibir) o transferencia bancaria. Te mandamos los datos por WhatsApp.</p>
+        </li>
+        <li>
+          <span class="garantias__letra">C</span>
+          <h3>Stock real, sin relleno</h3>
+          <p>El sello <em class="txt-terracota">Última pieza</em> significa que queda 1 en bodega. Si dice agotado, se fue.</p>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <!-- ================= PIE ================= -->
+  <footer class="pie">
+    <div class="envoltura">
+      <p class="pie__gigante" aria-hidden="true">QLZ STREET</p>
+      <div class="pie__fila">
+        <p class="pie__lema">Del Quetzal a la calle.<br />Cultura urbana desde Guatemala.</p>
+        <a class="pie__wa" href="https://wa.me/50252260992?text=Hola%20QLZ%20Street%2C%20vengo%20de%20la%20tienda%20web." target="_blank" rel="noopener noreferrer">WhatsApp +502 5226 0992 →</a>
+      </div>
+      <p class="pie__legal">© 2026 QLZ STREET · PRECIOS EN QUETZALES (Q) · GUATEMALA</p>
+    </div>
+  </footer>
+
+  <!-- Bolsa flotante (móvil) -->
+  <button type="button" class="bolsa-flotante" id="bolsaFlotante" hidden aria-label="Abrir bolsa">
+    <span class="bolsa-flotante__n" id="flotanteN">0</span>
+    <span class="bolsa-flotante__total" id="flotanteTotal">Q0.00</span>
+    <span aria-hidden="true">↑</span>
+  </button>
+
+  <div class="aviso" id="aviso" role="status" aria-live="polite" hidden></div>
+
+  <!-- ================= FICHA DE PRODUCTO (bottom sheet) ================= -->
+  <div class="capa" id="capaFicha" hidden>
+    <section class="ficha" id="ficha" role="dialog" aria-modal="true" aria-labelledby="fichaNombre" tabindex="-1">
+      <div class="ficha__asa" id="fichaAsa" aria-hidden="true"><span></span></div>
+      <div class="ficha__top">
+        <span class="ficha__codigo" id="fichaCodigo">[GORRA-001]</span>
+        <button type="button" class="btn-cerrar" id="fichaCerrar" aria-label="Cerrar ficha">Cerrar <span aria-hidden="true">✕</span></button>
+      </div>
+
+      <div class="ficha__cuerpo" id="fichaCuerpo">
+        <div class="galeria">
+          <div class="galeria__carril" id="galeriaCarril" tabindex="0" aria-label="Fotos del producto"></div>
+          <div class="galeria__ctrl" id="galeriaCtrl" hidden>
+            <button type="button" class="galeria__btn" id="galeriaPrev" aria-label="Foto anterior">←</button>
+            <span class="galeria__cont" id="galeriaCont">01 / 01</span>
+            <button type="button" class="galeria__btn" id="galeriaSig" aria-label="Foto siguiente">→</button>
+          </div>
+        </div>
+
+        <div class="ficha__info">
+          <div class="ficha__cabeza">
+            <span class="sello" id="fichaSello">Disponible</span>
+            <h2 class="ficha__nombre" id="fichaNombre">Nombre</h2>
+            <p class="ficha__precio"><span id="fichaPrecio">Q0.00</span> <small id="fichaUnidad" hidden>por unidad</small></p>
+          </div>
+
+          <dl class="ficha__tabla">
+            <div><dt>Código</dt><dd id="fichaTCodigo">—</dd></div>
+            <div><dt>Categoría</dt><dd id="fichaTCategoria">—</dd></div>
+            <div><dt>Existencias</dt><dd id="fichaTStock">—</dd></div>
+          </dl>
+
+          <h3 class="ficha__sub">Para qué sirve / detalles</h3>
+          <p class="ficha__detalles" id="fichaDetalles"></p>
+
+          <div class="ficha__nota" id="fichaNota" hidden></div>
+
+          <div class="ficha__logistica">
+            <div>
+              <h3 class="ficha__sub">Envíos</h3>
+              <p>A toda Guatemala: capital, municipios y los 22 departamentos (Forza Delivery o entrega personal). Costo según zona.</p>
+            </div>
+            <div>
+              <h3 class="ficha__sub">Pagos</h3>
+              <p><b>Pago contra entrega</b> o <b>transferencia bancaria</b>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ficha__accion">
+        <div class="pasos" id="fichaPasos" role="group" aria-label="Cantidad">
+          <button type="button" id="fichaMenos" aria-label="Quitar uno">−</button>
+          <output id="fichaCantidad" aria-live="polite">1</output>
+          <button type="button" id="fichaMas" aria-label="Agregar uno">+</button>
+        </div>
+        <button type="button" class="btn btn--bronce ficha__agregar" id="fichaAgregar">Agregar al carrito</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= BOLSA / RECIBO DE BODEGA (drawer) ================= -->
+  <div class="capa capa--recibo" id="capaRecibo" hidden>
+    <aside class="recibo" id="recibo" role="dialog" aria-modal="true" aria-labelledby="reciboTitulo" tabindex="-1">
+      <header class="recibo__cabeza">
+        <div>
+          <p class="recibo__kicker">QLZ STREET · RECIBO DE BODEGA</p>
+          <h2 class="recibo__titulo" id="reciboTitulo">Tu bolsa <span id="reciboN">(0)</span></h2>
+        </div>
+        <button type="button" class="btn-cerrar" id="reciboCerrar" aria-label="Cerrar bolsa">Cerrar <span aria-hidden="true">✕</span></button>
+      </header>
+
+      <div class="recibo__scroll" id="reciboScroll">
+        <p class="recibo__alerta" id="reciboAlerta" role="status" hidden></p>
+
+        <div class="recibo__vacio" id="reciboVacio">
+          <p class="recibo__vacio-big" aria-hidden="true">0</p>
+          <p>Tu bolsa está vacía. Lo que agregues se guarda aunque cierres la página.</p>
+          <button type="button" class="btn btn--linea" id="reciboSeguir">Ver catálogo</button>
+        </div>
+
+        <div id="reciboLleno" hidden>
+          <ol class="lineas" id="reciboLineas" aria-label="Productos en tu bolsa"></ol>
+
+          <dl class="totales">
+            <div><dt>Subtotal (<span id="totUnidades">0</span> pzas.)</dt><dd id="totSubtotal">Q0.00</dd></div>
+            <div class="totales--suave"><dt>Envío Guatemala</dt><dd>A coordinar según zona</dd></div>
+            <div class="totales--total"><dt>Total a pagar</dt><dd id="totTotal">Q0.00</dd></div>
+          </dl>
+          <button type="button" class="recibo__vaciar" id="reciboVaciar">Vaciar bolsa</button>
+
+          <form class="pedido" id="formPedido" novalidate>
+            <div class="pedido__cabeza">
+              <h3>Datos para tu pedido</h3>
+              <p class="pedido__progreso"><span id="progresoN">0</span>/4 <span class="pedido__barras" aria-hidden="true"><i></i><i></i><i></i><i></i></span></p>
+            </div>
+            <p class="pedido__ayuda">Los 4 datos son obligatorios: nuestro asistente de WhatsApp los usa para registrar tu pedido al instante.</p>
+
+            <div class="campo" data-campo="nombre">
+              <label for="inNombre">1 · Nombre completo</label>
+              <input type="text" id="inNombre" name="nombre" autocomplete="name" placeholder="Nombre y apellido" required />
+              <p class="campo__msg" id="msgNombre">Nombre y apellido de quien recibe.</p>
+            </div>
+
+            <div class="campo" data-campo="direccion">
+              <label for="inDireccion">2 · Dirección exacta de entrega</label>
+              <textarea id="inDireccion" name="direccion" rows="2" autocomplete="street-address" placeholder="Zona, colonia, casa/lote, municipio y departamento" required></textarea>
+              <p class="campo__msg" id="msgDireccion">Incluye zona, colonia y municipio / departamento.</p>
+            </div>
+
+            <div class="campo" data-campo="telefono">
+              <label for="inTelefono">3 · Teléfono de contacto</label>
+              <input type="tel" id="inTelefono" name="telefono" inputmode="tel" autocomplete="tel" placeholder="5555-4444" required />
+              <p class="campo__msg" id="msgTelefono">8 dígitos de Guatemala (con o sin +502).</p>
+            </div>
+
+            <fieldset class="campo campo--pago" data-campo="pago">
+              <legend>4 · Método de pago preferido</legend>
+              <div class="pagos">
+                <label class="pago">
+                  <input type="radio" name="pago" value="Pago contra entrega" required />
+                  <span class="pago__caja">
+                    <b>Pago contra entrega</b>
+                    <small>Efectivo al recibir</small>
+                  </span>
+                </label>
+                <label class="pago">
+                  <input type="radio" name="pago" value="Transferencia bancaria" />
+                  <span class="pago__caja">
+                    <b>Transferencia bancaria</b>
+                    <small>Datos por WhatsApp</small>
+                  </span>
+                </label>
+              </div>
+              <p class="campo__msg" id="msgPago">Elige cómo vas a pagar.</p>
+            </fieldset>
+
+            <p class="pedido__estado" id="pedidoEstado" aria-live="polite">Faltan: nombre · dirección · teléfono · pago</p>
+
+            <button type="submit" class="btn btn--bronce pedido__enviar" id="btnPedir" disabled aria-disabled="true">
+              Pedir por WhatsApp
+            </button>
+            <p class="pedido__pie">Se abre WhatsApp con +502 5226 0992 y tu pedido ya escrito.</p>
+          </form>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="js/productos.js"></script>
+  <script src="js/tienda.js"></script>
+</body>
+</html>
